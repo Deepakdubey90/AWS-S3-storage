@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home AWS</title>
+</head>
+<body>
+    <h2>Upload a the file to S3 bucket</h2>
+   <form id="upload_form" action="/upload">
+      <input type="file" name="file">
+      <input type="submit" name="upload" value="Upload">
+   </form>
+   <hr>
+   <h2>Download a file from the S3</h2>
+   <form id="download_form" action="/download" method="GET">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="download" value="Download">
+   </form>
+   <hr>
+
+   <h1>List all the Bucket Names in s3 for your account</h1>
+   <form id="list_form" action="/listbucket" method="GET">
+     <input type="submit" name="list" value="List Buckets">
+   </form>
+
+    <hr>
+    <h1>List all the files in the buckets</h1>
+   <form id="list_form" action="/listfiles" method="GET">
+     <input type="submit" name="exit" value="List Files">
+   </form>
+
+   <h2>Delete a file from the bucket</h2>
+   <form id="delete_form" action="/delete" method="GET">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="delete" value="Delete">
+   </form>
+   <hr>
+</body>
+</html>
